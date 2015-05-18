@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="257.0" prefWidth="288.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="App.Controller">
+   <children>
+      <AnchorPane layoutX="-6.0" prefHeight="257.0" prefWidth="318.0">
+         <children>
+            <TextField fx:id="MortgageInterestRate" layoutX="140.0" layoutY="121.0" />
+            <Label layoutX="38.0" layoutY="12.0" text="Mortgage Calculator" underline="true">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="61.0" text="Gross Income" />
+            <TextField fx:id="TotalGrossIncome" layoutX="140.0" layoutY="57.0" />
+            <TextField fx:id="TotalMonthlyDebt" layoutX="140.0" layoutY="88.0" />
+            <TextField fx:id="DownPayment" layoutX="140.0" layoutY="154.0" />
+            <Label layoutX="28.0" layoutY="92.0" text="Monthly Debt" />
+            <Label layoutX="28.0" layoutY="125.0" text="Mortgage Int. Rate" />
+            <Label layoutX="25.0" layoutY="154.0" text="Down Payment" />
+            <ComboBox fx:id="Term" layoutX="140.0" layoutY="189.0" prefWidth="150.0" />
+            <Label layoutX="24.0" layoutY="193.0" text="Term" />
+            <Button fx:id="Calc" layoutX="140.0" layoutY="226.0" mnemonicParsing="false" onAction="#HandleCalc" text="Calculate" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
