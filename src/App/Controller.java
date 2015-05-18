@@ -40,8 +40,9 @@ public class Controller {
 	private void HandleCalc() {
 		double TotalgrossIncome = Double.parseDouble(TotalGrossIncome.getText());
 		double JustHousing = (TotalgrossIncome / 12) * 0.18;
-		double OtherObligations = ((TotalgrossIncome / 12) * 0.36) - Double.parseDouble(TotalMonthlyDebt.getText());
+		double OtherObligations = ((TotalgrossIncome / 12) * 0.36) - (Double.parseDouble(TotalMonthlyDebt.getText()));
 		double maxPaymentAllowed = Math.min(JustHousing, OtherObligations);
+		
 		double TotalmonthlyInterest = (Double.parseDouble(MortgageInterestRate.getText()) / 100) / 12;
 		double NumOfPayments = Term.getValue() * 12;
 		double Financed = (maxPaymentAllowed * (Math.pow(1 + TotalmonthlyInterest, NumOfPayments) - 1) / (TotalmonthlyInterest * Math.pow(1+ TotalmonthlyInterest, NumOfPayments)));
